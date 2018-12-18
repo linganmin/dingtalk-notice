@@ -31,15 +31,28 @@ return [
 
 #### 使用辅助函数发送
 ```bash
-dingNotice()->setTextMessage('这里是报错信息')->setAtMobiles(['188xxxxxxxx'])->send();
+dingNotice()
+->setTextMessage('这里是报错信息')
+->setAtMobiles(['188xxxxxxxx'])
+->send();
 ```
 #### 使用Facade发送
 ```bash
-\Lingan\DingtalkNotice\Facades\DingtalkNotice::getFacadeRoot()->useRobot()->getInstance()->setTextMessage('这里是报错信息')->setAtMobiles(['188xxxxxxxx'])->send();
+\Lingan\DingtalkNotice\Facades\DingtalkNotice::getFacadeRoot()
+->useRobot()
+->getInstance()
+->setTextMessage('这里是报错信息')
+->setAtMobiles(['188xxxxxxxx'])
+->send();
 ```
 #### 使用服务容器发送
 ```bash
-app('dingtalk-notice')->useRobot()->getInstance()->setTextMessage('这里是报错信息')->setAtMobiles(['188xxxxxxxx'])->send();
+app('dingtalk-notice')
+->useRobot()
+->getInstance()
+->setTextMessage('这里是报错信息')
+->setAtMobiles(['188xxxxxxxx'])
+->send();
 ```
 
 ### 在非Laravel项目中使用
@@ -55,7 +68,11 @@ $config = [
     ],
 ];
 $d = new \Lingan\DingtalkNotice\DingtalkNotice($config);
-$d->useRobot()->getInstance()->setTextMessage('这里是报错信息')->setAtMobiles(['188xxxxxxxx'])->send();
+$d->useRobot()
+->getInstance()
+->setTextMessage('这里是报错信息')
+->setAtMobiles(['188xxxxxxxx'])
+->send();
 
 ```
 
