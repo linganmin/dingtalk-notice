@@ -39,7 +39,7 @@ class DingtalkNoticeServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('dingtalk-notice', function ($app) {
-            return new DingtalkNotice($app['config']['dingtalk']);
+            return new DingtalkNotice($app['config']['dingtalk'] ?? []);
         });
     }
 
