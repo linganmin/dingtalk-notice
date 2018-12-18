@@ -45,6 +45,18 @@ app('dingtalk-notice')->useRobot()->getInstance()->setTextMessage('这里是报�
 ### 在非Laravel项目中使用
 ```bash
 
+require_once './vendor/autoload.php';
+
+$config = [
+    'robot_base_url' => 'https://oapi.dingtalk.com/robot/send',
+    'timeout' => 2.0,
+    'access_token' => [
+                   'default' => env('DING_TOKEN', '你的钉钉群组机器人token'),// 默认
+    ],
+];
+$d = new \Lingan\DingtalkNotice\DingtalkNotice($config);
+$d->useRobot()->getInstance()->setTextMessage('这里是报错信息')->setAtMobiles(['188xxxxxxxx'])->send();
+
 ```
 
 ## TODO
