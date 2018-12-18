@@ -65,7 +65,7 @@ $config = [
     'robot_base_url' => 'https://oapi.dingtalk.com/robot/send',
     'timeout' => 2.0,
     'access_token' => [
-        'default' => env('DING_TOKEN', '你的钉钉群组机器人token'),// 默认
+        'default' => '你的钉钉群组机器人token',// 默认
     ],
 ];
 // 实例化
