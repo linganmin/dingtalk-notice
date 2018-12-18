@@ -19,7 +19,7 @@ class DingtalkNotice
     }
 
 
-    private function useRobot($robot = 'default')
+    public function useRobot($robot = 'default')
     {
         self::$instance = new DingtalkNoticeService($this->config, $robot);
         return $this;
