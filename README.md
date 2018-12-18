@@ -11,6 +11,11 @@ $ composer require lingan/dingtalk-notice -vvv
 
 ## Usage
 
+### use with laravel
+```shell
+php artisan vendor:publish
+```
+
 TODO
 
 ## Contributing
