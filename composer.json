@@ -1,12 +1,32 @@
 {
-    "name": "lingan/dingtalk-notice",
-    "description": "Package description here.",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "lingan",
-            "email": "saboranmin@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "lingan/dingtalk-notice",
+  "description": "Package description here.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lingan",
+      "email": "saboranmin@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lingan\\DingtalkNotice\\": "./src/"
+    },
+    "files": [
+      "./src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel":{
+      "providers": [
+        "Lingan\\DingtalkNotice\\DingtalkNoticeServiceProvider"
+      ],
+      "aliases": {
+        "DingNotice": "Lingan\\DingtalkNotice\\Facades\\DingtalkNotice"
+      }
+    }
+  }
 }
