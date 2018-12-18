@@ -1,0 +1,12 @@
+{
+    "name": "lingan/dingtalk-notice",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lingan",
+            "email": "saboranmin@gmail.com"
+        }
+    ],
+    "require": {}
+}
