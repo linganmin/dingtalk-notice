@@ -19,8 +19,6 @@ class HttpService
      */
     private function __construct(Client $client)
     {
-        $this->config = config('services.guzzle', []);
-
         $this->client = $client;
     }
 
