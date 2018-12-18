@@ -60,15 +60,19 @@ app('dingtalk-notice')
 
 require_once './vendor/autoload.php';
 
+// 配置文件
 $config = [
     'robot_base_url' => 'https://oapi.dingtalk.com/robot/send',
     'timeout' => 2.0,
     'access_token' => [
-                   'default' => env('DING_TOKEN', '你的钉钉群组机器人token'),// 默认
+        'default' => env('DING_TOKEN', '你的钉钉群组机器人token'),// 默认
     ],
 ];
-$d = new \Lingan\DingtalkNotice\DingtalkNotice($config);
-$d->useRobot()
+// 实例化
+$dingtalk = new \Lingan\DingtalkNotice\DingtalkNotice($config);
+
+// 发送
+$dingtalk->useRobot()
 ->getInstance()
 ->setTextMessage('这里是报错信息')
 ->setAtMobiles(['188xxxxxxxx'])
