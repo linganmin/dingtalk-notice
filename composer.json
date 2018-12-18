@@ -1,6 +1,6 @@
 {
   "name": "lingan/dingtalk-notice",
-  "description": "Package description here.",
+  "description": "一个钉钉机器人的拓展包",
   "license": "MIT",
   "authors": [
     {
